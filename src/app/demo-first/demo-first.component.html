@@ -1,0 +1,34 @@
+<div style="margin: 40px 40px;">
+    <form class="example-form" [formGroup]="forms">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Favorite food" formControlName="food">
+          <mat-error *ngIf="forms.get('food').invalid">{{getError('food')}}</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field class="example-half-width" style="display: block; width: 40%;">
+          <textarea matInput placeholder="Leave a comment" formControlName="comment"></textarea>
+        </mat-form-field>
+    </form>
+
+<div>{{favFood}}</div>
+
+<div>{{comment}}</div>
+</div>
+
+
+<!-- <div>
+    <div class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Favorite food" [(ngModel)]="favFood" (ngModelChange)="onModelChange('favFood', $event)">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      
+        <mat-form-field class="example-half-width" style="display: block; width: 40%;">
+          <textarea matInput placeholder="Leave a comment" [(ngModel)]="comment" (ngModelChange)="onModelChange('comment', $event)"></textarea>
+        </mat-form-field>
+    </div>
+
+<div>{{favFood}}</div>
+
+<div>{{comment}}</div>
+</div> -->
